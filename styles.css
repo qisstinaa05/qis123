@@ -1,0 +1,376 @@
+/*General Styling*/
+body{
+  font-family:Poppins;
+  background-image:url(background.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:0;
+  padding:0;
+}
+
+/*about me*/
+.about-box img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.about-page .about-box {
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 80%;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-page .animated-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/*my family*/
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.animated-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1.5s ease-out forwards, float 4s ease-in-out infinite;
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* my education */
+.education-page .edu-container{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+.education-page .edu-card{
+  width:260px;
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  text-align:center;
+  transition:0.3s;
+}
+
+.education-page .edu-card:hover{
+  transform:translateY(-10px);
+}
+
+.education-page .edu-card img{
+  width:100%;
+  height:180px;
+  border-radius:15px;
+  object-fit:cover;
+}
+
+/* my experiences */
+.experiences {
+    padding: 60px 0;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 2px solid #ffffff40;
+    display: inline-block;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.experience-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.exp-img {
+    width: 250px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid #ffffff30;
+}
+
+.exp-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exp-text h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color:black;
+}
+
+.exp-text p {
+    color: black;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Mobile responsive */
+@media(max-width: 768px) {
+    .experience-item,
+    .experience-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exp-img {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/* GRID SYSTEM */
+.grid {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 25px;
+}
+
+/* favourites */
+.box {
+  width: 100%;
+  padding-top: 20%; /* maintain square */
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  border: 2px solid white;
+  border-radius: 15px;
+  position: relative;
+}
+
+/* Label bawah kotak */
+.label {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 18px;
+  color: black;
+}
+
+/* my hobby */
+.hobby-page .hobby-wrapper{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+.hobby-page .hobby-box{
+  width:260px;
+  background:rgba(255,255,255,0.8);
+  border-radius:25px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  backdrop-filter:blur(5px);
+  transition:0.3s;
+}
+
+.hobby-page .hobby-box:hover{
+  transform:scale(1.05);
+}
+
+.hobby-page .hobby-box img{
+  width:180px;
+  height:180px;
+  border-radius:20px;
+  object-fit:cover;
+}
+
+/* my favourites */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*my friends*/
+.friendss-page {
+}
+
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.friends-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.friend-box {
+    width: 100%;
+    padding-top: 100%; /* buat kotak sama lebar & tinggi */
+    background-color: #ddd;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.friend-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*my gallery */
+.grid-4 {
+  grid-template-columns:repeat(4, 1fr);
+  position: center;
+}
+
+/*Heading*/
+h1 {
+  text-align:center;
+  color:white;
+  margin:20px 0;
+}
+
+/*Navigation bar*/
+nav{
+  background-image:url('background inside.jpg');
+  color:black;
+  width:800px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:0 auto;
+  padding: 20px 20px;
+  border-radius:20px;
+  box-shadow:2px 2px 20px rgba(0,0,0,0.3);
+}
+
+nav > a{
+  color:black;
+  text-decoration:none;
+  padding:8px 16px;
+  border-radius:22px;
+  transition:background 0.25s,color 0.25s;
+}
+
+nav > a:hover{
+  background:rgb(56,130,209);
+  color:white;
+}
+
+/*Website content*/
+.content{
+  background-image:url('background inside.jpg');
+  color:black;
+  width:80%;
+  max-width:800px;
+  margin:40px auto 100px auto;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:2px 2px 15px rgba(0,0,0,0.2);
+  text-align:center;
+  transition:background 0.25s, color 0.25s;
+}
+
+.content h2{
+  margin-bottom:15px;
+  color:black;
+}
+
+/*Footer styling*/
+.footer{
+  background:black;
+  color:white;
+  text-align:center;
+  padding:15px 0;
+  bottom:0;
+  left:0;
+  width:100%;
+  position:fixed;
+}
+
+.footer p{
+  margin:10px;
+}
+
+/* java clock */
+.clock-wrap {
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  color: white;
+  margin: 5px auto;
+}
+
+#clock {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#date {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}

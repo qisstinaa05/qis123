@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" a href="styles.css">
+	<title> Index Style 2</title>
+</head>
+<body>
+	<body class="friendss-page">
+
+<!-- Javascript clock -->
+<div class="clock-wrap">
+  <span id="clock">--:--:--</span><br>
+  <span id="date"></span>
+</div>
+
+<h1>QISS' PERSONAL WEBSITE</h1>
+<nav>
+	<a href="index.html">Home</a>
+	<a href="aboutme.html">About me</a>
+	<a href="family.html">Family</a>
+	<a href="education.html">Education</a>
+	<a href="experience.html">Experience</a>
+	<a href="friends.html">Friends</a>
+	<a href="hobby.html">Hobby</a>
+	<a href="favourites.html">Favourites</a>
+	<a href="gallery.html">Gallery</a>
+</nav>
+
+<!----Website content here---->
+
+<div class= "content">
+	<h2>👩‍❤️‍💋‍👩 MY FRIENDS 👩‍❤️‍💋‍👩</h2>
+	 <div class="friends-bar"></div>
+
+    <div class="friends-grid">
+        <img src="friends1.jpg"  alt="My Photo" class="animated-photo">
+        <img src="friends2.jpg"  alt="My Photo" class="animated-photo">
+        <img src="friends3.jpg"  alt="My Photo" class="animated-photo">
+        <img src="friends4.jpg"  alt="My Photo" class="animated-photo">
+        <img src="friends5.jpg"  alt="My Photo" class="animated-photo">
+        <img src="friends6.jpg"  alt="My Photo" class="animated-photo">
+        <img src="friends7.jpg"  alt="My Photo" class="animated-photo">
+        <img src="friends8.jpg"  alt="My Photo" class="animated-photo">
+    </div>
+
+</div>
+	<footer class= "footer">
+		<p>&copy; 2025, Designed for educational purpose only | Batrisyia Qistina</p>
+	</footer>
+
+
+<!-- Javascript clock -->
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    const time = now.toLocaleTimeString('ms-MY', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
+
+    const date = now.toLocaleDateString('ms-MY', {
+      weekday: 'long',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+
+    document.getElementById("clock").textContent = time;
+    document.getElementById("date").textContent = date;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>

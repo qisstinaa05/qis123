@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>Index Style 2</title>
+</head>
+
+<body class="indexx-page">
+
+  <!-- Javascript clock -->
+<div class="clock-wrap">
+  <span id="clock">--:--:--</span><br>
+  <span id="date"></span>
+</div>
+
+<h1>QISS' PERSONAL WEBSITE</h1>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About me</a>
+  <a href="family.html">Family</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="friends.html">Friends</a>
+  <a href="hobby.html">Hobby</a>
+  <a href="favourites.html">Favourites</a>
+  <a href="gallery.html">Gallery</a>
+</nav>
+
+<div class="content">
+  <h2>HOME</h2>
+  <p>This is my personal website where I share my projects, my personal detail, hobbies, favourites, family, education, and many more.</p>
+
+  <p>"The only limit to our realization of tomorrow will be our doubts of today". "Choose to be optimistic, it feels better" – Dalai Lama. "It always seems impossible until it's done". "The best preparation for tomorrow is doing your best today".</p>
+
+  <p>My hope from this semester: Attend all class.</p>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2025, Designed for educational purpose only | Batrisyia Qistina</p>
+</footer>
+
+<!-- Javascript clock -->
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    const time = now.toLocaleTimeString('ms-MY', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
+
+    const date = now.toLocaleDateString('ms-MY', {
+      weekday: 'long',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+
+    document.getElementById("clock").textContent = time;
+    document.getElementById("date").textContent = date;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
